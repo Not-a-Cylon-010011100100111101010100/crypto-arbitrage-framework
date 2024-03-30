@@ -1,4 +1,4 @@
-from crypto.exchanges import exchanges
+from exchanges import exchanges
 from crypto.path_optimizer import PathOptimizer
 from crypto.amount_optimizer import AmtOptimizer
 from crypto.trade_execution import TradeExecutor

@@ -6,7 +6,11 @@ import json
 import threading
 import datetime
 import pytz
+from dotenv import load_dotenv
+import os
 
+# Load the .env file
+load_dotenv()
 
 def get_withdrawal_fees(exchange, trading_size=1000):
     '''
@@ -50,7 +54,7 @@ def get_crypto_prices(coin_set, convert='USD'):
     }
     headers = {
         'Accepts': 'application/json',
-        'X-CMC_PRO_API_KEY': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+        'X-CMC_PRO_API_KEY': os.getenv('API_KEY'),
     }
 
     session = Session()
